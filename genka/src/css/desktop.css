@@ -1,0 +1,76 @@
+.gbc-open{height:40px;margin:0 8px;padding:0 14px;border:1px solid #1f6f5c;background:#fff;color:#1f6f5c;font-weight:600;cursor:pointer}
+.gbc-chip{display:inline-block;margin:0 8px;padding:4px 10px;border:1px solid #9cb;background:#eef6f3;color:#174f42;font-size:13px;font-weight:600;line-height:30px;vertical-align:middle}
+.gbc-chip-warn{border-color:#d9b400;background:#fff5cc;color:#5c4a00}
+.gbc-chip-over{border-color:#c62828;background:#fdecea;color:#9b1c1c}
+.gbc-cell-warn{background:#fff5cc!important}
+.gbc-cell-over{background:#fdecea!important;color:#9b1c1c!important;font-weight:700}
+.gbc-panel{box-sizing:border-box;max-width:900px;padding:8px 0;color:#111;font-size:13px}
+.gbc-panel .gbc-table{width:100%}
+#gbc-report{position:fixed;inset:0;z-index:100000;overflow:auto;background:#d8d8d8;color:#111;font-family:sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.gbc-bar{position:sticky;top:0;z-index:1;display:flex;align-items:center;gap:10px;padding:10px 16px;background:#fff;border-bottom:1px solid #999;font-size:14px}
+.gbc-bar button{height:36px;padding:0 16px;cursor:pointer}
+.gbc-bar .gbc-print{background:#1f6f5c;border:0;color:#fff}
+.gbc-bar .gbc-print:disabled{background:#999;cursor:default}
+.gbc-status.gbc-warn{color:#b3261e}
+.gbc-sheet{box-sizing:border-box;width:210mm;min-height:297mm;margin:12px auto;padding:12mm 12mm 10mm;background:#fff;font-size:10pt;line-height:1.45}
+.gbc-sheet.gbc-wide{width:297mm;min-height:210mm}
+.gbc-head{margin-bottom:5mm}
+.gbc-right{margin:0;text-align:right;white-space:pre-wrap;font-size:9.5pt}
+.gbc-title{margin:2mm 0 0;text-align:center;font-size:18pt;letter-spacing:.2em;text-indent:.2em;font-weight:600}
+.gbc-parties{display:flex;justify-content:space-between;gap:8mm;margin-bottom:4mm}
+.gbc-left{flex:1 1 58%;min-width:0}
+.gbc-info{width:100%;border-collapse:collapse}
+.gbc-info th,.gbc-info td{padding:1mm 1.5mm;border-bottom:.2mm solid #777;text-align:left;vertical-align:top;font-size:9.5pt}
+.gbc-info th{width:18mm;font-weight:600;white-space:nowrap}
+.gbc-info td{overflow-wrap:anywhere;white-space:pre-wrap}
+.gbc-from{flex:0 0 66mm;display:flex;flex-direction:column;align-items:flex-end;gap:3mm}
+.gbc-company{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:9.5pt;align-self:stretch}
+.gbc-stamps{border-collapse:collapse;table-layout:fixed}
+.gbc-stamps th,.gbc-stamps td{width:15mm;border:.3mm solid #111;text-align:center;font-weight:400;font-size:8pt}
+.gbc-stamps td{height:15mm}
+.gbc-boxes{display:grid;grid-template-columns:repeat(4,1fr);gap:2mm;margin:0 0 4mm}
+.gbc-boxes.gbc-six{grid-template-columns:repeat(3,1fr)}
+.gbc-box{min-width:0;padding:1.5mm 2.5mm;border:.3mm solid #333;background:#fff}
+.gbc-box span{display:block;color:#444;font-size:8.5pt}
+.gbc-box b{display:block;font-size:12pt;white-space:nowrap}
+.gbc-table{width:100%;border-collapse:collapse;table-layout:fixed;background:#fff}
+.gbc-table th,.gbc-table td{padding:1.2mm 1.5mm;border:.25mm solid #333;vertical-align:middle;overflow-wrap:anywhere}
+.gbc-table thead th{background:#eee;font-weight:600;font-size:9pt;text-align:center;white-space:nowrap}
+.gbc-table .gbc-n{text-align:right;white-space:nowrap}
+.gbc-col-item{width:auto}
+.gbc-col-n{width:25mm}
+.gbc-col-rate{width:17mm}
+.gbc-col-bar{width:30mm}
+.gbc-col-over{width:40mm}
+.gbc-list .gbc-col-n{width:23mm}
+.gbc-list .gbc-col-bar{width:24mm}
+.gbc-overs{font-size:8.5pt;color:#9b1c1c}
+.gbc-minus{color:#b3261e}
+.gbc-mark{display:inline-block;margin-left:2mm;padding:0 1.5mm;border:.25mm solid currentColor;font-size:7.5pt;font-weight:700;line-height:1.4;vertical-align:1px}
+.gbc-mark-over{color:#b3261e}
+.gbc-mark-warn{color:#6b5500}
+.gbc-row-over td{background:#fdecea}
+.gbc-row-warn td{background:#fff5cc}
+.gbc-row-part td.gbc-overs{background:#fdecea}
+.gbc-track{display:block;height:3.2mm;border:.25mm solid #555;background:#fff}
+.gbc-fill{display:block;height:100%;background:#1f6f5c}
+.gbc-fill.gbc-warn{background:#d9a400}
+.gbc-fill.gbc-over{background:#c62828}
+.gbc-total th{text-align:right;font-weight:700;background:#eee}
+.gbc-total td{font-weight:700;border-top:.5mm solid #111}
+.gbc-total th{border-top:.5mm solid #111}
+.gbc-table tr{break-inside:avoid}
+.gbc-legend{margin:2mm 0 0;color:#444;font-size:8.5pt}
+.gbc-foot{margin:3mm 0 0;color:#555;font-size:8pt;text-align:right}
+@media print{
+  @page{size:A4 portrait;margin:10mm}
+  @page gbcwide{size:A4 landscape;margin:10mm}
+  html{background:#fff!important}
+  body.gbc-printing{height:auto!important;overflow:visible!important;background:#fff!important}
+  body.gbc-printing>*:not(#gbc-report){display:none!important}
+  /* ほかの印刷プラグインと同じアプリに入れても、予実表が隠れないようにする */
+  html body.gbc-printing>div#gbc-report{display:block!important;position:static;overflow:visible;background:#fff}
+  .gbc-bar{display:none!important}
+  .gbc-sheet{width:auto;min-height:0;margin:0;padding:0}
+  .gbc-sheet.gbc-wide{width:auto;min-height:0;page:gbcwide}
+}

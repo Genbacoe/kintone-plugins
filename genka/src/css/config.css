@@ -1,0 +1,8 @@
+.gbc-config{max-width:560px;padding:16px 0;font-size:14px}
+.gbc-config h3{margin:24px 0 4px;font-size:15px}
+.gbc-config label{display:block;margin:14px 0;font-weight:600}
+.gbc-config select,.gbc-config input,.gbc-config textarea{display:block;box-sizing:border-box;width:100%;margin-top:4px;font-weight:400}
+.gbc-config select,.gbc-config input{height:36px}
+.gbc-note{margin:4px 0;color:#555;font-size:12px}
+.gbc-actions button{min-width:110px;height:40px;cursor:pointer}
+#gbc-save{background:#1f6f5c;border:0;color:#fff}

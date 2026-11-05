@@ -1,0 +1,19 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "name": {"ja": "工事原価の予実表", "en": "Construction Cost Budget vs Actual"},
+  "description": {
+    "ja": "テーブルの費目ごとに、実行予算と実績の差額と消化率を計算し、予算を超えた費目を色で示します。A4の予実表と工事別の一覧を印刷できます。",
+    "en": "Compares the working budget with actual cost for each cost item in a table, highlights items over budget, and prints an A4 budget-vs-actual sheet and a project list."
+  },
+  "icon": "image/icon.png",
+  "homepage_url": {"ja": "https://genbakoe.com/kintone/genka/", "en": "https://genbakoe.com/kintone/genka/"},
+  "desktop": {"js": ["js/desktop.js"], "css": ["css/desktop.css"]},
+  "config": {
+    "html": "html/config.html",
+    "js": ["js/config.js"],
+    "css": ["css/config.css"],
+    "required_params": ["table", "item", "budget", "actual"]
+  }
+}

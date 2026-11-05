@@ -1,0 +1,42 @@
+<div class="gbc-config">
+  <p>実行予算のテーブル（サブテーブル）と、費目、実行予算、実績は必ず選んでください。それ以外は空欄でもかまいません。</p>
+  <h3>実行予算</h3>
+  <label>実行予算のテーブル（必須）<select id="gbc-table"></select></label>
+  <label>費目（必須）<select id="gbc-item" data-row="table" data-kind="text"></select></label>
+  <label>実行予算の金額（必須）<select id="gbc-budget" data-row="table" data-kind="number"></select></label>
+  <p class="gbc-note">同じ費目の行は合算します。費目は「労務費」「材料費」「外注費」「経費」のような分け方でも、工種ごとでもかまいません。</p>
+
+  <h3>実績</h3>
+  <label>実績のテーブル<select id="gbc-actual-table"></select></label>
+  <p class="gbc-note">実績が実行予算と同じテーブルの別の列なら「実行予算と同じテーブル」のままにします。支払いごとに行を足す別のテーブルなら、そのテーブルを選びます。</p>
+  <label>実績の費目（別のテーブルのとき必須）<select id="gbc-actual-item" data-row="actual" data-kind="text"></select></label>
+  <label>実績の金額（必須）<select id="gbc-actual" data-row="actual" data-kind="number"></select></label>
+
+  <h3>注意の色</h3>
+  <label>黄色にする消化率（%）<input id="gbc-warn" type="text" inputmode="decimal" maxlength="5" placeholder="空欄なら90"></label>
+  <p class="gbc-note">実績が実行予算を超えた費目は赤、消化率がこの値以上の費目は黄色にします。</p>
+
+  <h3>計算結果の書き込み先（数値フィールド）</h3>
+  <p class="gbc-note">選ぶと、作成と編集の画面で自動で計算して入れます。そのフィールドは手で変えられなくなります。計算フィールドは選べません。一覧に出しておくと、消化率と差額の欄が色分けされます。</p>
+  <label>実行予算の合計<select id="gbc-out-budget" data-top="output"></select></label>
+  <label>実績の合計<select id="gbc-out-actual" data-top="output"></select></label>
+  <label>差額（実行予算−実績）<select id="gbc-out-diff" data-top="output"></select></label>
+  <label>消化率（%、小数1桁）<select id="gbc-out-rate" data-top="output"></select></label>
+  <label>行ごとの差額（実績が同じテーブルのとき）<select id="gbc-row-diff" data-row="table" data-kind="output"></select></label>
+  <label>行ごとの消化率（実績が同じテーブルのとき）<select id="gbc-row-rate" data-row="table" data-kind="output"></select></label>
+
+  <h3>詳細画面と予実表</h3>
+  <label>予実の表を出すスペース<select id="gbc-space"></select></label>
+  <p class="gbc-note">フォームにスペースを置いて要素IDを付けると、ここで選べます。選ばなくても、詳細画面の上に消化率と印刷のボタンが出ます。</p>
+  <label>請負金額<select id="gbc-contract" data-top="number"></select></label>
+  <p class="gbc-note">選ぶと、予定粗利（請負金額−実行予算の合計）も出します。</p>
+  <label>タイトル<input id="gbc-title" type="text" maxlength="20" placeholder="実行予算 予実表"></label>
+  <label>工事名<select id="gbc-project" data-top="text"></select></label>
+  <label>工事番号<select id="gbc-no" data-top="text"></select></label>
+  <label>発注者<select id="gbc-client" data-top="text"></select></label>
+  <label>工期<select id="gbc-term" data-top="text"></select></label>
+  <label>担当<select id="gbc-person" data-top="text"></select></label>
+  <label>自社の情報（会社名、部署など。改行できます）<textarea id="gbc-company" rows="3" maxlength="300"></textarea></label>
+  <label>検印欄の見出し（読点かカンマで区切る、4つまで）<input id="gbc-stamps" type="text" maxlength="40" placeholder="例：承認,確認,作成"></label>
+  <p class="gbc-actions"><button type="button" id="gbc-save">保存</button> <button type="button" id="gbc-cancel">キャンセル</button></p>
+</div>
