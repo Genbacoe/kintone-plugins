@@ -1,0 +1,19 @@
+{
+  "manifest_version": 1,
+  "version": 2,
+  "type": "APP",
+  "name": {"ja": "現場写真台帳プリント", "en": "Site Photo Ledger Print"},
+  "description": {
+    "ja": "添付した工事写真を、撮影日や工種とあわせてA4の写真台帳にして印刷します。",
+    "en": "Prints attached construction photos as an A4 photo ledger with date, work type and notes."
+  },
+  "icon": "image/icon.png",
+  "homepage_url": {"ja": "https://genbakoe.com/kintone/photo-ledger/", "en": "https://genbakoe.com/kintone/photo-ledger/"},
+  "desktop": {"js": ["js/desktop.js"], "css": ["css/desktop.css"]},
+  "config": {
+    "html": "html/config.html",
+    "js": ["js/config.js"],
+    "css": ["css/config.css"],
+    "required_params": ["photo"]
+  }
+}

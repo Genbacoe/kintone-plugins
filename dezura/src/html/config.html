@@ -1,0 +1,12 @@
+<div class="gbz-config">
+  <p>出面を集計するフィールドを選びます。日付、協力会社、人工は必ず選んでください。</p>
+  <label>日付（日付フィールド）<select id="gbz-date"></select></label>
+  <label>協力会社<select id="gbz-company"></select></label>
+  <label>人工（数値か計算）<select id="gbz-amount"></select></label>
+  <p class="gbz-note">協力会社と人工は、どちらもテーブルの外か、どちらも同じテーブルの中のフィールドにしてください。テーブルの中なら、1行を1件として集計します。</p>
+  <label>工事名（なくてもよい）<select id="gbz-project"></select></label>
+  <h3>印刷</h3>
+  <label>集計表のタイトル<input id="gbz-title" type="text" maxlength="30"></label>
+  <label>会社ごとの確認表の確認欄（読点かカンマで区切る、4つまで）<input id="gbz-stamps" type="text" maxlength="60"></label>
+  <p class="gbz-actions"><button type="button" id="gbz-save">保存</button> <button type="button" id="gbz-cancel">キャンセル</button></p>
+</div>

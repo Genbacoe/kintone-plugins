@@ -1,0 +1,6 @@
+.gbk-config{max-width:480px;padding:16px 0;font-size:14px}
+#gbk-fields label{display:block;margin:8px 0;font-weight:400}
+.gbk-config>label{display:block;margin:16px 0;font-weight:600}
+.gbk-config input[type=number]{display:block;width:120px;height:36px;margin-top:4px}
+.gbk-actions button{min-width:110px;height:40px;cursor:pointer}
+#gbk-save{background:#1f6f5c;border:0;color:#fff}

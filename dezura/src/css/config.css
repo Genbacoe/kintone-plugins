@@ -1,0 +1,7 @@
+.gbz-config{max-width:560px;padding:16px 0;font-size:14px}
+.gbz-config h3{margin:24px 0 4px;font-size:15px}
+.gbz-config label{display:block;margin:14px 0;font-weight:600}
+.gbz-config select,.gbz-config input{display:block;box-sizing:border-box;width:100%;height:36px;margin-top:4px;font-weight:400}
+.gbz-note{margin:4px 0;color:#555;font-size:12px}
+.gbz-actions button{min-width:110px;height:40px;cursor:pointer}
+#gbz-save{background:#1f6f5c;border:0;color:#fff}

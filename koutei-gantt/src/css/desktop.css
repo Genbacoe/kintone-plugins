@@ -1,0 +1,75 @@
+.gbg-open{height:40px;margin:0 8px;padding:0 14px;border:1px solid #1f6f5c;background:#fff;color:#1f6f5c;font-weight:600;cursor:pointer}
+#gbg-report{position:fixed;inset:0;z-index:100000;overflow:auto;background:#d8d8d8;color:#111;font-family:sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.gbg-bar{position:sticky;top:0;left:0;z-index:2;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 16px;background:#fff;border-bottom:1px solid #999;font-size:14px}
+.gbg-bar button,.gbg-bar select,.gbg-bar input{height:36px;padding:0 10px}
+.gbg-bar button{cursor:pointer}
+.gbg-bar .gbg-print{background:#1f6f5c;border:0;color:#fff}
+.gbg-sheet{box-sizing:border-box;margin:12px auto;padding:10mm;background:#fff;font-size:8pt}
+.gbg-a3{width:420mm;min-height:297mm}
+.gbg-a4{width:297mm;min-height:210mm}
+.gbg-head{display:flex;align-items:baseline;gap:8mm;margin-bottom:3mm}
+.gbg-title{margin:0;font-size:15pt;letter-spacing:.1em}
+.gbg-period{font-size:10pt}
+.gbg-printed{margin-left:auto;color:#444}
+.gbg-row{position:relative;display:flex;height:6mm;border-bottom:.2mm solid #bbb}
+.gbg-label{flex:0 0 92mm;width:92mm;min-width:0;overflow:hidden;display:flex;box-sizing:border-box;border-right:.3mm solid #111;background:#fff}
+.gbg-label>div{box-sizing:border-box;padding:0 1mm;line-height:6mm;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gbg-c-task{flex:1 1 auto;min-width:0}
+.gbg-c-company{flex:0 0 24mm;border-left:.2mm solid #ccc}
+.gbg-c-progress{flex:0 0 11mm;border-left:.2mm solid #ccc;text-align:right}
+.gbg-c-date{flex:0 0 22mm;border-left:.2mm solid #ccc;font-size:7pt}
+.gbg-track{position:relative;flex:1 1 auto;min-width:0}
+.gbg-header{height:10mm;border-top:.3mm solid #111;border-bottom:.3mm solid #111;background:#eee}
+.gbg-header .gbg-label{background:#eee;align-items:flex-end}
+.gbg-header .gbg-label>div{font-weight:600}
+.gbg-scale,.gbg-months,.gbg-days{position:absolute;left:0;right:0}
+.gbg-months{top:0;height:5mm}
+.gbg-days{top:5mm;height:5mm}
+.gbg-month,.gbg-day,.gbg-week{position:absolute;top:0;height:5mm;box-sizing:border-box;line-height:5mm;overflow:hidden;white-space:nowrap;text-align:center}
+.gbg-month{border-left:.3mm solid #111;padding-left:1mm;text-align:left;font-weight:600}
+.gbg-day{font-size:6pt}
+.gbg-week{border-left:.2mm solid #999;padding-left:.5mm;text-align:left;font-size:6.5pt}
+.gbg-sun-text{color:#b71c1c}
+.gbg-sat-text{color:#0d47a1}
+.gbg-body{position:relative;border-bottom:.3mm solid #111}
+.gbg-grid{position:absolute;top:0;bottom:0;left:92mm;right:0}
+.gbg-grid>div{position:absolute;top:0;bottom:0}
+.gbg-sat{background:#e8eef7}
+.gbg-sun{background:#f7e8e8}
+.gbg-line{border-left:.1mm solid #ddd}
+.gbg-month-line{border-left:.3mm solid #666}
+.gbg-today{border-left:.5mm solid #d32f2f;z-index:1}
+.gbg-body .gbg-row{background:transparent}
+.gbg-group{font-weight:600;border-bottom:.2mm solid #888}
+.gbg-group .gbg-label{background:#f1f1f1}
+.gbg-outside .gbg-c-date{color:#888}
+.gbg-track>div{position:absolute;box-sizing:border-box}
+.gbg-plan{top:.9mm;height:2.6mm;border:.3mm solid #1f6f5c;background:#cfe6df;overflow:hidden}
+.gbg-plan.gbg-done{border-color:#555;background:#c8c8c8}
+.gbg-fill{height:100%;background:#1f6f5c}
+.gbg-done .gbg-fill{background:#777}
+.gbg-actual{top:3.9mm;height:1.3mm;background:#e65100}
+.gbg-ongoing{background:repeating-linear-gradient(90deg,#e65100 0 2mm,#ffb74d 2mm 3mm)}
+.gbg-summary{top:2.2mm;height:1.6mm;background:#111}
+.gbg-cut-left{border-left-style:dashed!important}
+.gbg-cut-right{border-right-style:dashed!important}
+.gbg-legend{display:flex;gap:6mm;margin-top:2mm;color:#333}
+.gbg-key::before{content:"";display:inline-block;width:8mm;height:2.4mm;margin-right:1.5mm;vertical-align:middle}
+.gbg-key-plan::before{border:.3mm solid #1f6f5c;background:#cfe6df}
+.gbg-key-fill::before{background:#1f6f5c}
+.gbg-key-actual::before{height:1.3mm;background:#e65100}
+.gbg-key-today::before{width:0;height:4mm;border-left:.5mm solid #d32f2f}
+@page gbg-a3{size:A3 landscape;margin:10mm}
+@page gbg-a4{size:A4 landscape;margin:10mm}
+@media print{
+  html{background:#fff!important}
+  body.gbg-printing{height:auto!important;overflow:visible!important;background:#fff!important}
+  body.gbg-printing>*:not(#gbg-report){display:none!important}
+  /* ほかのゲンバコエのプラグインと同じアプリに入れても、工程表が隠れないようにする */
+  html body.gbg-printing>div#gbg-report{display:block!important;position:static;overflow:visible;background:#fff}
+  .gbg-bar{display:none!important}
+  .gbg-sheet{width:auto;min-height:0;margin:0;padding:0;break-after:page;break-inside:avoid}
+  .gbg-sheet:last-child{break-after:auto}
+  .gbg-sheet.gbg-a3{page:gbg-a3}
+  .gbg-sheet.gbg-a4{page:gbg-a4}
+}

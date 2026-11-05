@@ -1,0 +1,19 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "name": {"ja": "進捗バー・段階表示", "en": "Progress Bar and Step Indicator"},
+  "description": {
+    "ja": "数値のフィールドを進捗バーに、ドロップダウンやステータスを段階表示にして、一覧と詳細の画面に出します。予定と比べた遅れも表示できます。",
+    "en": "Shows number fields as progress bars and drop-downs or process status as step indicators on list and detail screens, with an optional behind-schedule mark."
+  },
+  "icon": "image/icon.png",
+  "homepage_url": {"ja": "https://genbakoe.com/kintone/indicator/", "en": "https://genbakoe.com/kintone/indicator/"},
+  "desktop": {"js": ["js/desktop.js"], "css": ["css/desktop.css"]},
+  "config": {
+    "html": "html/config.html",
+    "js": ["js/config.js"],
+    "css": ["css/config.css"],
+    "required_params": ["rules"]
+  }
+}

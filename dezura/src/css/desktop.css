@@ -1,0 +1,52 @@
+.gbz-open{height:40px;margin:0 8px;padding:0 14px;border:1px solid #1f6f5c;background:#fff;color:#1f6f5c;font-weight:600;cursor:pointer}
+#gbz-report{position:fixed;inset:0;z-index:100000;overflow:auto;background:#d8d8d8;color:#111;font-family:sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.gbz-bar{position:sticky;top:0;z-index:1;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 16px;background:#fff;border-bottom:1px solid #999;font-size:14px}
+.gbz-bar button,.gbz-bar select,.gbz-bar input{height:36px;padding:0 10px}
+.gbz-bar button{cursor:pointer}
+.gbz-bar .gbz-print{background:#1f6f5c;border:0;color:#fff}
+.gbz-bar .gbz-print:disabled{background:#999}
+.gbz-sheet{box-sizing:border-box;margin:12px auto;padding:10mm;background:#fff}
+.gbz-wide{width:297mm;min-height:210mm}
+.gbz-tall{width:210mm;min-height:297mm}
+.gbz-head{display:flex;align-items:baseline;gap:8mm;margin-bottom:3mm}
+.gbz-title{margin:0;font-size:15pt;letter-spacing:.1em}
+.gbz-projects{font-size:9pt;color:#333}
+.gbz-grid{width:100%;border-collapse:collapse;table-layout:fixed;font-size:7.5pt}
+.gbz-grid th,.gbz-grid td{border:.2mm solid #111;padding:.6mm .3mm;text-align:center;font-weight:400;overflow-wrap:anywhere}
+.gbz-grid .gbz-name{width:30mm;padding:.6mm 1mm;text-align:left}
+.gbz-grid .gbz-total{width:13mm;font-weight:600}
+.gbz-grid thead th,.gbz-grid tfoot th,.gbz-grid tfoot td{background:#eee}
+.gbz-grid .gbz-sat{background:#e3ecf7}
+.gbz-grid .gbz-sun{background:#f7e3e3}
+.gbz-grid tfoot td,.gbz-grid tfoot th{font-weight:600}
+.gbz-foot{margin:2mm 0 0;color:#444;font-size:8pt}
+.gbz-top{display:flex;justify-content:space-between;align-items:flex-start;gap:6mm;margin-bottom:4mm}
+.gbz-company{margin:2mm 0 0;font-size:13pt;font-weight:600}
+.gbz-stamps{border-collapse:collapse;table-layout:fixed}
+.gbz-stamps th,.gbz-stamps td{width:20mm;border:.3mm solid #111;text-align:center;font-weight:400;font-size:8.5pt}
+.gbz-stamps td{height:16mm}
+.gbz-days{width:100%;border-collapse:collapse;table-layout:fixed;font-size:9pt}
+.gbz-days th,.gbz-days td{height:6.6mm;padding:0 1.5mm;border:.2mm solid #111;text-align:left;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.gbz-days th{background:#eee;font-weight:600}
+.gbz-days th:nth-child(1),.gbz-days th:nth-child(2){width:9mm}
+.gbz-days th:nth-child(3){width:16mm}
+.gbz-days th:nth-child(5){width:40mm}
+.gbz-days .gbz-num{text-align:right}
+.gbz-days tr.gbz-sat td{background:#e3ecf7}
+.gbz-days tr.gbz-sun td{background:#f7e3e3}
+.gbz-days tfoot td,.gbz-days tfoot th{background:#eee;font-weight:600}
+.gbz-grid tr{break-inside:avoid}
+@page gbz-land{size:A4 landscape;margin:10mm}
+@page gbz-port{size:A4 portrait;margin:10mm}
+@media print{
+  html{background:#fff!important}
+  body.gbz-printing{height:auto!important;overflow:visible!important;background:#fff!important}
+  body.gbz-printing>*:not(#gbz-report){display:none!important}
+  /* ほかのゲンバコエのプラグインと同じアプリに入れても、帳票が隠れないようにする */
+  html body.gbz-printing>div#gbz-report{display:block!important;position:static;overflow:visible;background:#fff}
+  .gbz-bar{display:none!important}
+  .gbz-sheet{width:auto;min-height:0;margin:0;padding:0;break-after:page}
+  .gbz-sheet:last-child{break-after:auto}
+  .gbz-wide{page:gbz-land}
+  .gbz-tall{page:gbz-port}
+}

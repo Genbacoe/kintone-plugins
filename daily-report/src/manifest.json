@@ -1,0 +1,19 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "name": {"ja": "作業日報・KY記録プリント", "en": "Daily Report and KY Record Print"},
+  "description": {
+    "ja": "レコードを、検印欄や署名欄つきのA4の作業日報やKY活動記録にして印刷します。一覧からまとめて印刷もできます。",
+    "en": "Prints records as A4 daily work reports or KY (hazard prediction) records with approval stamps and signature boxes."
+  },
+  "icon": "image/icon.png",
+  "homepage_url": {"ja": "https://genbakoe.com/kintone/daily-report/", "en": "https://genbakoe.com/kintone/daily-report/"},
+  "desktop": {"js": ["js/desktop.js"], "css": ["css/desktop.css"]},
+  "config": {
+    "html": "html/config.html",
+    "js": ["js/config.js"],
+    "css": ["css/config.css"],
+    "required_params": ["rows"]
+  }
+}

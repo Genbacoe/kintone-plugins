@@ -1,0 +1,57 @@
+.gbe-open{height:40px;margin:0 8px;padding:0 14px;border:1px solid #1f6f5c;background:#fff;color:#1f6f5c;font-weight:600;cursor:pointer}
+#gbe-report{position:fixed;inset:0;z-index:100000;overflow:auto;background:#d8d8d8;color:#111;font-family:sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.gbe-bar{position:sticky;top:0;z-index:1;display:flex;align-items:center;gap:10px;padding:10px 16px;background:#fff;border-bottom:1px solid #999;font-size:14px}
+.gbe-bar button{height:36px;padding:0 16px;cursor:pointer}
+.gbe-bar .gbe-print{background:#1f6f5c;border:0;color:#fff}
+.gbe-status.gbe-warn{color:#b3261e}
+.gbe-sheet{box-sizing:border-box;width:210mm;min-height:297mm;margin:12px auto;padding:12mm 12mm 10mm;background:#fff;font-size:10pt;line-height:1.45}
+.gbe-head{position:relative;margin-bottom:6mm}
+.gbe-right{margin:0;text-align:right;white-space:pre-wrap;font-size:9.5pt}
+.gbe-title{margin:2mm 0 0;text-align:center;font-size:20pt;letter-spacing:.5em;text-indent:.5em;font-weight:600}
+.gbe-parties{display:flex;justify-content:space-between;gap:8mm;margin-bottom:5mm}
+.gbe-to{flex:1 1 58%;min-width:0}
+.gbe-to-name{margin:0 0 2mm;padding-bottom:1mm;border-bottom:.3mm solid #111;font-size:13pt;overflow-wrap:anywhere}
+.gbe-lead{margin:0 0 3mm}
+.gbe-total{display:flex;align-items:baseline;gap:3mm;margin-bottom:3mm;padding:2mm 3mm;border:.5mm solid #111}
+.gbe-total b{font-size:16pt;letter-spacing:.03em}
+.gbe-small{font-size:8.5pt}
+.gbe-info{width:100%;border-collapse:collapse}
+.gbe-info th,.gbe-info td{padding:1mm 1.5mm;border-bottom:.2mm solid #777;text-align:left;vertical-align:top;font-size:9.5pt}
+.gbe-info th{width:24mm;font-weight:600;white-space:nowrap}
+.gbe-info td{overflow-wrap:anywhere;white-space:pre-wrap}
+.gbe-from{flex:0 0 66mm;display:flex;flex-direction:column;align-items:flex-end;gap:3mm}
+.gbe-company{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-size:9.5pt;align-self:stretch}
+.gbe-stamps{border-collapse:collapse;table-layout:fixed}
+.gbe-stamps th,.gbe-stamps td{width:15mm;border:.3mm solid #111;text-align:center;font-weight:400;font-size:8pt}
+.gbe-stamps td{height:15mm}
+.gbe-lines{width:100%;border-collapse:collapse;table-layout:fixed}
+.gbe-lines th,.gbe-lines td{padding:1.2mm 1.5mm;border:.25mm solid #333;vertical-align:top;overflow-wrap:anywhere;white-space:pre-wrap}
+.gbe-lines thead th{background:#eee;font-weight:600;font-size:9pt;text-align:center;white-space:nowrap}
+.gbe-lines .gbe-n{text-align:right;white-space:nowrap}
+.gbe-lines .gbe-c{text-align:center}
+.gbe-col-name{width:auto}
+.gbe-col-spec{width:24mm}
+.gbe-col-qty{width:15mm}
+.gbe-col-unit{width:11mm}
+.gbe-col-price{width:20mm}
+.gbe-col-amount{width:26mm}
+.gbe-col-remark{width:28mm}
+.gbe-sum .gbe-rest{background:#fafafa}
+.gbe-heading td:first-child{font-weight:600}
+.gbe-sum th{text-align:right;font-weight:400;background:#fafafa}
+.gbe-sum.gbe-first th,.gbe-sum.gbe-first td{border-top:.5mm solid #111}
+.gbe-sum.gbe-grand th,.gbe-sum.gbe-grand td{font-weight:700;background:#eee}
+.gbe-lines tr{break-inside:avoid}
+.gbe-notes{margin-top:4mm;padding:2mm;border:.25mm solid #333}
+.gbe-notes p{margin:1mm 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.gbe-foot{margin:3mm 0 0;color:#555;font-size:8pt;text-align:right}
+@media print{
+  @page{size:A4 portrait;margin:10mm}
+  html{background:#fff!important}
+  body.gbe-printing{height:auto!important;overflow:visible!important;background:#fff!important}
+  body.gbe-printing>*:not(#gbe-report){display:none!important}
+  /* ほかの印刷プラグインと同じアプリに入れても、見積書が隠れないようにする */
+  html body.gbe-printing>div#gbe-report{display:block!important;position:static;overflow:visible;background:#fff}
+  .gbe-bar{display:none!important}
+  .gbe-sheet{width:auto;min-height:0;margin:0;padding:0}
+}

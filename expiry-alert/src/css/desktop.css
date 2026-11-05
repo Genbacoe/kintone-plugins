@@ -1,0 +1,6 @@
+.gbk-expired{background:#c62828!important;color:#fff!important;font-weight:700}
+.gbk-expired a,.gbk-expired span{color:#fff!important}
+.gbk-soon{background:#ffe082!important;color:#111!important;font-weight:700}
+.gbk-soon a,.gbk-soon span{color:#111!important}
+.gbk-tag{display:inline-block;margin-left:6px;font-size:12px}
+.gbk-summary{display:inline-block;margin:8px;padding:6px 12px;border:1px solid #999;background:#fff;color:#111;font-weight:700;font-size:13px}

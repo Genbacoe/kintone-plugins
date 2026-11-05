@@ -1,0 +1,43 @@
+<div class="gbe-config">
+  <p>明細のテーブル（サブテーブル）と、品名、数量、単価は必ず選んでください。それ以外は空欄でもかまいません。</p>
+  <h3>明細</h3>
+  <label>明細のテーブル（必須）<select id="gbe-table"></select></label>
+  <label>品名（必須）<select id="gbe-name" data-row="text"></select></label>
+  <label>規格・仕様<select id="gbe-spec" data-row="text"></select></label>
+  <label>数量（必須）<select id="gbe-qty" data-row="number"></select></label>
+  <label>単位<select id="gbe-unit" data-row="text"></select></label>
+  <label>単価（必須）<select id="gbe-price" data-row="number"></select></label>
+  <label>金額の書き込み先（数値フィールド）<select id="gbe-amount" data-row="output"></select></label>
+  <label>備考<select id="gbe-remark" data-row="text"></select></label>
+  <p class="gbe-note">金額は 数量×単価 を1円未満で四捨五入します。品名だけの行は、見出しの行として金額なしで印刷します。</p>
+
+  <h3>諸経費、法定福利費、値引き</h3>
+  <label>諸経費率（%）のフィールド<select id="gbe-rate-field" data-top="number"></select></label>
+  <label>フィールドを使わないときの諸経費率（%）<input id="gbe-rate" type="text" inputmode="decimal" maxlength="8" placeholder="空欄なら0"></label>
+  <label>法定福利費（円）のフィールド<select id="gbe-welfare" data-top="number"></select></label>
+  <label>値引き（円）のフィールド<select id="gbe-discount" data-top="number"></select></label>
+  <p class="gbe-note">諸経費 = 小計 × 諸経費率（1円未満四捨五入）。税抜合計 = 小計 + 諸経費 + 法定福利費 − 値引き。消費税は税抜合計の10%で、1円未満は切り捨てます。率や金額は御社の基準で入れてください。</p>
+
+  <h3>計算結果の書き込み先（数値フィールド）</h3>
+  <p class="gbe-note">選ぶと、作成と編集の画面で自動で計算して入れます。そのフィールドは手で変えられなくなります。計算フィールドは選べません。</p>
+  <label>小計<select id="gbe-out-sub" data-top="output"></select></label>
+  <label>諸経費<select id="gbe-out-exp" data-top="output"></select></label>
+  <label>税抜合計<select id="gbe-out-base" data-top="output"></select></label>
+  <label>消費税<select id="gbe-out-tax" data-top="output"></select></label>
+  <label>税込合計<select id="gbe-out-total" data-top="output"></select></label>
+
+  <h3>見積書の上の欄</h3>
+  <label>タイトル<input id="gbe-title" type="text" maxlength="20" placeholder="御見積書"></label>
+  <label>宛先<select id="gbe-to" data-top="text"></select></label>
+  <label>工事名<select id="gbe-project" data-top="text"></select></label>
+  <label>工事場所<select id="gbe-place" data-top="text"></select></label>
+  <label>工期<select id="gbe-term" data-top="text"></select></label>
+  <label>見積番号<select id="gbe-no" data-top="text"></select></label>
+  <label>発行日<select id="gbe-date" data-top="text"></select></label>
+  <label>有効期限<select id="gbe-limit" data-top="text"></select></label>
+  <label>お支払い条件<select id="gbe-pay" data-top="text"></select></label>
+  <label>備考<select id="gbe-note" data-top="text"></select></label>
+  <label>自社の情報（会社名、住所、電話など。改行できます）<textarea id="gbe-company" rows="4" maxlength="300"></textarea></label>
+  <label>検印欄の見出し（読点かカンマで区切る、4つまで）<input id="gbe-stamps" type="text" maxlength="40" placeholder="例：承認,確認,作成"></label>
+  <p class="gbe-actions"><button type="button" id="gbe-save">保存</button> <button type="button" id="gbe-cancel">キャンセル</button></p>
+</div>

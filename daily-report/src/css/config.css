@@ -1,0 +1,12 @@
+.gbd-config{max-width:560px;padding:16px 0;font-size:14px}
+.gbd-config h3{margin:24px 0 4px;font-size:15px}
+.gbd-config label{display:block;margin:14px 0;font-weight:600}
+.gbd-config select,.gbd-config input{display:block;box-sizing:border-box;width:100%;height:36px;margin-top:4px;font-weight:400}
+.gbd-config input[type=number]{width:120px}
+.gbd-note{margin:4px 0;color:#555;font-size:12px}
+.gbd-row{display:flex;gap:8px;margin:8px 0}
+.gbd-row span{flex:0 0 2em;line-height:36px;text-align:right;color:#555}
+.gbd-row select{flex:1 1 60%;margin:0}
+.gbd-row input{flex:1 1 40%;margin:0}
+.gbd-actions button{min-width:110px;height:40px;cursor:pointer}
+#gbd-save{background:#1f6f5c;border:0;color:#fff}

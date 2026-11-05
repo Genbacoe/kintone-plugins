@@ -1,0 +1,20 @@
+.gbi-ind{box-sizing:border-box;font-size:12px;line-height:1.4;color:#333}
+.gbi-detail{margin:6px 0;max-width:520px;text-align:left;white-space:normal}
+.gbi-detail-top{padding:0 16px}
+.gbi-track{position:relative;height:12px;border:1px solid #9aa5a1;border-radius:2px;background:#eef1f0;overflow:visible}
+.gbi-compact .gbi-track{height:8px}
+.gbi-ind.gbi-compact{margin-top:-8px;padding:0 8px 8px!important;text-align:left;overflow:hidden}
+.gbi-compact .gbi-text{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.gbi-fill{height:100%;width:0;background:#1f6f5c}
+.gbi-full .gbi-fill{background:#2e7d32}
+.gbi-behind .gbi-fill{background:#c77700}
+.gbi-plan-mark{position:absolute;top:-3px;bottom:-3px;width:0;border-left:2px solid #b3261e;margin-left:-1px}
+.gbi-empty .gbi-track{border-style:dashed}
+.gbi-text{display:block;margin-top:2px;overflow-wrap:anywhere}
+.gbi-behind .gbi-text{color:#8a4b00;font-weight:600}
+.gbi-step-list{display:flex;margin:0;padding:0;list-style:none;gap:2px}
+.gbi-step-list li{flex:1 1 0;min-width:0;padding:3px 4px;border:1px solid #9aa5a1;background:#eef1f0;color:#555;text-align:center;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.gbi-step-list li.gbi-done{background:#cfe3dc;border-color:#1f6f5c;color:#1f4f43}
+.gbi-step-list li.gbi-now{background:#1f6f5c;border-color:#1f6f5c;color:#fff;font-weight:600}
+.gbi-compact .gbi-step-list li{height:8px;padding:0}
+.gbi-outside .gbi-text{color:#b3261e;font-weight:600}

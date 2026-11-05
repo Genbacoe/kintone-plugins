@@ -1,0 +1,14 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "name": {"ja": "現場の期限アラート", "en": "Site Expiry Alert"},
+  "description": {
+    "ja": "資格、車検、許可、保険、工期などの日付を、期限切れは赤、期限が近いものは黄色で表示します。",
+    "en": "Highlights expired dates in red and upcoming dates in yellow for licenses, inspections, insurance and work periods."
+  },
+  "icon": "image/icon.png",
+  "homepage_url": {"ja": "https://genbakoe.com/kintone/expiry-alert/", "en": "https://genbakoe.com/kintone/expiry-alert/"},
+  "desktop": {"js": ["js/desktop.js"], "css": ["css/desktop.css"]},
+  "config": {"html": "html/config.html", "js": ["js/config.js"], "css": ["css/config.css"], "required_params": ["fields"]}
+}

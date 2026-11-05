@@ -1,0 +1,17 @@
+<div class="gbg-config">
+  <p>工程表に使うフィールドを選びます。作業名、開始日、終了日は必ず選んでください。テーブル（サブテーブル）の中のフィールドは使えません。1レコードが1つの工程です。</p>
+  <label>作業名<select id="gbg-task"></select></label>
+  <label>開始日（予定）<select id="gbg-start"></select></label>
+  <label>終了日（予定）<select id="gbg-end"></select></label>
+  <h3>なくてもよい項目</h3>
+  <label>工事名（工事ごとにまとめます）<select id="gbg-project"></select></label>
+  <label>協力会社・担当<select id="gbg-company"></select></label>
+  <label>進捗率（0から100の数値）<select id="gbg-progress"></select></label>
+  <label>実績の開始日<select id="gbg-actual-start"></select></label>
+  <label>実績の終了日<select id="gbg-actual-end"></select></label>
+  <p class="gbg-note">実績の開始日だけ入っていて終了日が空のときは、今日まで線を引きます。</p>
+  <h3>印刷</h3>
+  <label>タイトル<input id="gbg-title" type="text" maxlength="30"></label>
+  <label>用紙の初期値<select id="gbg-paper"><option value="a3">A3横</option><option value="a4">A4横</option></select></label>
+  <p class="gbg-actions"><button type="button" id="gbg-save">保存</button> <button type="button" id="gbg-cancel">キャンセル</button></p>
+</div>

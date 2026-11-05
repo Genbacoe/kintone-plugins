@@ -1,0 +1,19 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "name": {"ja": "工程表ガントプリント", "en": "Construction Schedule Gantt Print"},
+  "description": {
+    "ja": "工程のレコードを、工事ごとにまとめた横棒の工程表にして、A4横かA3横で印刷します。進捗率と実績の線も描けます。",
+    "en": "Shows schedule records as a gantt chart grouped by project and prints it on A4 or A3 landscape."
+  },
+  "icon": "image/icon.png",
+  "homepage_url": {"ja": "https://genbakoe.com/kintone/koutei-gantt/", "en": "https://genbakoe.com/kintone/koutei-gantt/"},
+  "desktop": {"js": ["js/desktop.js"], "css": ["css/desktop.css"]},
+  "config": {
+    "html": "html/config.html",
+    "js": ["js/config.js"],
+    "css": ["css/config.css"],
+    "required_params": ["task", "start", "end"]
+  }
+}

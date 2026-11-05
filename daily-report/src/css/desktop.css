@@ -1,0 +1,41 @@
+.gbd-open{height:40px;margin:0 8px;padding:0 14px;border:1px solid #1f6f5c;background:#fff;color:#1f6f5c;font-weight:600;cursor:pointer}
+#gbd-report{position:fixed;inset:0;z-index:100000;overflow:auto;background:#d8d8d8;color:#111;font-family:sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.gbd-bar{position:sticky;top:0;z-index:1;display:flex;align-items:center;gap:10px;padding:10px 16px;background:#fff;border-bottom:1px solid #999;font-size:14px}
+.gbd-bar button{height:36px;padding:0 16px;cursor:pointer}
+.gbd-bar .gbd-print{background:#1f6f5c;border:0;color:#fff}
+.gbd-probe{height:277mm;width:1px;position:absolute;visibility:hidden}
+.gbd-sheet{box-sizing:border-box;width:210mm;min-height:297mm;margin:12px auto;padding:10mm;background:#fff}
+.gbd-sheet.gbd-over{outline:3px solid #c62828}
+.gbd-inner{font-size:10.5pt;line-height:1.45}
+.gbd-top{display:flex;justify-content:space-between;align-items:flex-start;gap:6mm;margin-bottom:4mm}
+.gbd-title{margin:2mm 0 0;font-size:18pt;letter-spacing:.2em}
+.gbd-stamps{border-collapse:collapse;table-layout:fixed}
+.gbd-stamps th,.gbd-stamps td{width:18mm;border:.3mm solid #111;text-align:center;font-weight:400;font-size:8.5pt}
+.gbd-stamps td{height:16mm}
+.gbd-meta{display:flex;flex-wrap:wrap;margin:0 0 3mm;border-top:.3mm solid #111;border-left:.3mm solid #111}
+.gbd-meta>div{flex:1 1 30%;display:flex;min-width:0;border-right:.3mm solid #111;border-bottom:.3mm solid #111}
+.gbd-meta dt{flex:0 0 16mm;padding:1.5mm;background:#eee;font-size:9pt}
+.gbd-meta dd{flex:1;min-width:0;margin:0;padding:1.5mm;overflow-wrap:anywhere;white-space:pre-wrap}
+.gbd-body{width:100%;border-collapse:collapse;table-layout:fixed}
+.gbd-body>tbody>tr>th{width:28mm;padding:2mm;border:.3mm solid #111;background:#eee;text-align:left;vertical-align:top;font-weight:600;font-size:9.5pt}
+.gbd-body>tbody>tr>td{height:14mm;padding:2mm;border:.3mm solid #111;vertical-align:top;overflow-wrap:anywhere;white-space:pre-wrap}
+.gbd-body td.gbd-has-sub{padding:1mm;white-space:normal}
+.gbd-sub{width:100%;border-collapse:collapse;font-size:9pt}
+.gbd-sub th,.gbd-sub td{padding:1mm 1.5mm;border:.2mm solid #555;text-align:left;vertical-align:top;overflow-wrap:anywhere;white-space:pre-wrap}
+.gbd-sub th{background:#f3f3f3;font-weight:600}
+.gbd-signs{margin-top:4mm}
+.gbd-sign-label{margin:0 0 1mm;font-weight:600;font-size:9.5pt}
+.gbd-sign-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:.3mm solid #111;border-left:.3mm solid #111}
+.gbd-sign{height:11mm;border-right:.3mm solid #111;border-bottom:.3mm solid #111}
+.gbd-foot{display:flex;justify-content:space-between;margin-top:3mm;color:#555;font-size:8pt}
+.gbd-body tr,.gbd-sub tr,.gbd-sign{break-inside:avoid}
+@media print{
+  @page{size:A4 portrait;margin:10mm}
+  body.gbd-printing{height:auto!important;overflow:visible!important;background:#fff!important}
+  body.gbd-printing>*:not(#gbd-report){display:none!important}
+  /* 写真台帳プラグインと同じアプリに入れても、帳票が隠れないようにする */
+  html body.gbd-printing>div#gbd-report{display:block!important;position:static;overflow:visible;background:#fff}
+  .gbd-bar{display:none!important}
+  .gbd-sheet{width:auto;min-height:0;margin:0;padding:0;outline:0!important;break-after:page}
+  .gbd-sheet:last-child{break-after:auto}
+}

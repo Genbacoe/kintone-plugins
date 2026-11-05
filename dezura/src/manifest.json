@@ -1,0 +1,19 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "name": {"ja": "出面（人工）月次集計プリント", "en": "Monthly Crew-Day Summary Print"},
+  "description": {
+    "ja": "日々の出面レコードから、協力会社ごとの人工を月の日別に集計して、A4で印刷します。会社ごとの確認表も作れます。",
+    "en": "Totals crew-days per subcontractor for each day of a month from daily records and prints them on A4."
+  },
+  "icon": "image/icon.png",
+  "homepage_url": {"ja": "https://genbakoe.com/kintone/dezura/", "en": "https://genbakoe.com/kintone/dezura/"},
+  "desktop": {"js": ["js/desktop.js"], "css": ["css/desktop.css"]},
+  "config": {
+    "html": "html/config.html",
+    "js": ["js/config.js"],
+    "css": ["css/config.css"],
+    "required_params": ["date", "company", "amount"]
+  }
+}

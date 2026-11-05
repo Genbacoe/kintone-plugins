@@ -1,0 +1,19 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "name": {"ja": "工事見積書プリント", "en": "Construction Estimate Print"},
+  "description": {
+    "ja": "テーブルの明細から小計、諸経費、法定福利費、値引き、消費税を計算し、A4の工事見積書にして印刷します。",
+    "en": "Calculates subtotal, overhead, statutory welfare cost, discount and 10% consumption tax from table rows, and prints an A4 construction estimate."
+  },
+  "icon": "image/icon.png",
+  "homepage_url": {"ja": "https://genbakoe.com/kintone/estimate/", "en": "https://genbakoe.com/kintone/estimate/"},
+  "desktop": {"js": ["js/desktop.js"], "css": ["css/desktop.css"]},
+  "config": {
+    "html": "html/config.html",
+    "js": ["js/config.js"],
+    "css": ["css/config.css"],
+    "required_params": ["table", "name", "qty", "price"]
+  }
+}

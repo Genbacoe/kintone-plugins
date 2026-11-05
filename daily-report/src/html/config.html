@@ -1,0 +1,20 @@
+<div class="gbd-config">
+  <p>帳票に載せるフィールドを選びます。本文の項目は1つ以上選んでください。それ以外は空欄でもかまいません。</p>
+  <label>帳票の種類<select id="gbd-kind"><option value="daily">作業日報</option><option value="ky">KY活動記録</option><option value="free">その他</option></select></label>
+  <p class="gbd-note">種類を変えると、タイトル、検印欄、署名欄の数がその種類のおすすめに変わります。</p>
+  <label>タイトル<input id="gbd-title" type="text" maxlength="40"></label>
+  <h3>上の欄</h3>
+  <label>日付<select id="gbd-date" data-head="1"></select></label>
+  <label>工事名<select id="gbd-project" data-head="1"></select></label>
+  <label>場所<select id="gbd-place" data-head="1"></select></label>
+  <label>天候<select id="gbd-weather" data-head="1"></select></label>
+  <label>作成者<select id="gbd-author" data-head="1"></select></label>
+  <h3>本文の項目</h3>
+  <p class="gbd-note">上から順に印刷します。テーブル（サブテーブル）は表にして印刷します。見出しを空欄にすると、フィールド名を使います。</p>
+  <div id="gbd-rows"></div>
+  <h3>検印欄と署名欄</h3>
+  <label>検印欄の見出し（読点かカンマで区切る、5つまで）<input id="gbd-stamps" type="text" maxlength="60"></label>
+  <label>手書きの署名欄の数（0から30）<input id="gbd-signs" type="number" min="0" max="30"></label>
+  <label>署名欄の見出し<input id="gbd-sign-label" type="text" maxlength="30"></label>
+  <p class="gbd-actions"><button type="button" id="gbd-save">保存</button> <button type="button" id="gbd-cancel">キャンセル</button></p>
+</div>
